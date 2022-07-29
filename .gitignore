@@ -1,0 +1,12 @@
+*.iml
+.gradle
+/local.properties
+.idea/*
+!.idea/copyright
+.DS_Store
+/build
+/builds
+/captures
+.externalNativeBuild
+ktlint
+app/jacoco.exec
