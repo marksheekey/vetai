@@ -12,4 +12,6 @@ Feel free to choose any libraries you want to create your solution.
 
 We suggest you spend a few hours on it. When you are satisfied with the result you can share the repo with us on Github to `GiacomoDB` or Gitlab to `giacomo.debacco`.
 Any issue or question drop us an email at giacomo.de.bacco@vet-ai.com.
+
+Please fork or download this repo and work on it on your own space. You can send it as instructed above.
 Thank you.
