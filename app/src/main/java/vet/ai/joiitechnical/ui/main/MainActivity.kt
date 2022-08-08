@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.commit
 import dagger.hilt.android.AndroidEntryPoint
 import vet.ai.joiitechnical.R
-import vet.ai.joiitechnical.ui.pokemons.PokemonListFragment
+import vet.ai.joiitechnical.ui.pokemons.list.PokemonListFragment
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity(), FragmentManager {

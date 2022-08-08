@@ -1,24 +1,25 @@
 package vet.ai.joiitechnical.modules.database.pokemon
 
-import androidx.lifecycle.LiveData
 import androidx.room.Dao
+import androidx.room.Insert
+import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import io.reactivex.Flowable
-import io.reactivex.Maybe
+import kotlinx.coroutines.flow.Flow
 import vet.ai.joiitechnical.modules.database.BaseDao
+import vet.ai.joiitechnical.modules.network.pokemon.Pokemon
 
 @Dao
 interface PokemonDao: BaseDao<PokemonDB> {
 
     @Query("SELECT * FROM pokemon WHERE id = :id LIMIT 1 ")
-    fun getPokemon(id: Int): Maybe<PokemonDB>
+    fun getPokemon(id: Int): PokemonDB
 
     @Query("SELECT * FROM pokemon")
-    fun getAllPokemonsRx(): Maybe<List<PokemonDB>>
+    fun getAllPokemon(): Flow<List<PokemonDB>>
 
-    @Query("SELECT * FROM pokemon")
-    fun getAllPokemonsFlowable(): Flowable<List<PokemonDB>>
+    @Query("SELECT * FROM pokemon WHERE favourited = '1'")
+    fun getFavouritePokemon(): Flow<List<PokemonDB>>
 
-    @Query("SELECT * FROM pokemon")
-    fun getAllPokemons(): LiveData<List<PokemonDB>>
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertAll(pokemon: List<PokemonDB>)
 }

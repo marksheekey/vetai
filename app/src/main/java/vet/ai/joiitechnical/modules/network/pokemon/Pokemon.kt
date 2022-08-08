@@ -14,8 +14,6 @@ import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
 data class Pokemon(
-    @PrimaryKey(autoGenerate = true)
-    val id: Int,
     @SerializedName("name") val name: String,
     @SerializedName("url") val url: String
 )
