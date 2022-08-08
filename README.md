@@ -46,4 +46,4 @@ Steps taken to Improve.
 2. Need mechanism to update db with favourite flag
 3. I think what i have in place will successfully toggle between favourited / not favourite
 4. Will use GLide to get image for pokemon
-5. THe spec asked me to submit when satisfied - I'm not satisfied it de
+5. THe spec asked me to submit when satisfied - I'm not satisfied it as it's not working and i havent finished.
